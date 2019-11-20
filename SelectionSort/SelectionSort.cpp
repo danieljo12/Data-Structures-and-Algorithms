@@ -11,21 +11,21 @@ void swap(int* xp, int* yp)
 
 void selectionSort(int arr[], int n)
 {
-	int i, j, min_idx;
+	int i, j, minNum;
 
 	for (i = 0; i < n - 1; i++)
 	{
-		// assigns the inner loop `i` value to min_idx
-		min_idx = i;
+		// assigns the inner loop `i` value to minNum
+		minNum = i;
 		for (j = i + 1; j < n; j++) {
-			if (arr[j] < arr[min_idx])
-				min_idx = j;
+			if (arr[j] < arr[minNum])
+				minNum = j;
 
 
 
 			// Swaps the minmiun value found to array element of `i` 
-			if (min_idx != i) {
-				swap(&arr[min_idx], &arr[i]);
+			if (minNum != i) {
+				swap(&arr[minNum], &arr[i]);
 				//cout << "swapredd ";
 			}
 			cout << arr[i] << ", " << i << "ddd ";
