@@ -16,7 +16,7 @@ void HashTable::add(HashObject* p_object) {
 	const int original_index = index;
 
 	bool found = false;
-	// This while loop checks if the index that was given by the hash function is in use. if it is it tryes to find a new spot nearby
+	// This while loop checks if the index that was given by the hash function is in use. if it is then it addes one to the index and the modulus by the size of the hash table
 	while (m_data[index].getKey() != HashObject::getNullKey()) {
 
 		if (m_data[index].getKey() == p_object->getKey()) {
